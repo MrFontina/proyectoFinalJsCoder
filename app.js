@@ -28,7 +28,7 @@ stock.forEach((producto) => {
     div.classList.add('producto')
     div.innerHTML = `
         <h4>${producto.tipo}</h4>
-        <p>Precio: ${producto.precio}</p>
+        <p>Precio: USD ${producto.precio}</p>
         <img src="${producto.img} ">
         <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
     `
