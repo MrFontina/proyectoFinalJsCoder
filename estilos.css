@@ -1,0 +1,16 @@
+.producto{
+    height: 300px;
+    
+}
+
+.producto img{
+    width: 150px;
+}
+
+#contenedorProductos {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
