@@ -17,8 +17,13 @@ obtenerDatosDelLocalStorage.forEach((prod) => {
 })
 
 
-let urlFetch = "https://api-dolar-argentina.herokuapp.com/api/dolarblue"
 
-fetch(urlFetch)
-    .then((res) => res.json())
-    .then((dolar) => {console.log(dolar)})
+
+let apiDolarUrl = "https://www.dolarsi.com/api/api.php?type=valoresprincipales"
+
+
+fetch(apiDolarUrl)
+    .then((response) => response.json())
+    .then((dolar) => {console.log(dolar[1].casa.venta)})
+
+
