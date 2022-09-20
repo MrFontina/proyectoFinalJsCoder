@@ -1,3 +1,5 @@
+//elementos del formulario
+
 let formRegistro = document.getElementById('formRegistro')
 let formMail = document.getElementById('formMail')
 let formNombre = document.getElementById('formNombre')
@@ -8,14 +10,16 @@ let nombre = document.getElementById('nombreApellido')
 let telefono = document.getElementById('telefono')
 let pais = document.getElementById('selectPais')
 
+//imagenes para alerta
+
 const imgArg = "../img/argentina.jpg"
 const imgChile = "../img/chile.jpg"
 const imgUruguay = "../img/uruguay.jpg"
 
+
+//Validacion de datos
+
 formRegistro.addEventListener('submit', validarDatosForm)
-
-
-
 
 
 function validarDatosForm(e) {
@@ -70,6 +74,3 @@ function validarDatosForm(e) {
 
 
 
-// function redirigir () = {
-//     window.location.href = "https://www.google.com" 
-// }

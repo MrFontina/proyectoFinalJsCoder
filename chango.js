@@ -1,3 +1,5 @@
+//Funciones del changuito de compras
+
 let contenedorChango = document.getElementById('contenedorChango')
 
 let chango = []
@@ -14,7 +16,7 @@ actualizarChango = () => {
         let div = document.createElement('div')
         div.innerHTML = `<div><p>Nombre del producto: ${prod.tipo}</p>
         <p>Precio: USD${prod.precio}<p/>
-        <button onclick="eliminarDelChango(${prod.id})" class="boton-eliminar">Eliminar<i class="fas fa-trash-alt"></i></button>
+        <button onclick="eliminarDelChango(${prod.id}), toastifyDelete()" class="boton-eliminar">Eliminar<i class="fas fa-trash-alt"></i></button>
         </div>
         `
         contenedorChango.appendChild(div)

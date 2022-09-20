@@ -1,3 +1,5 @@
+//Traigo los elementos del html
+
 let elementosDelChango = document.getElementById('elementosDelChango')
 
 let obtenerDatosDelLocalStorage = JSON.parse(localStorage.getItem('chango'))
@@ -7,9 +9,14 @@ let precioTotal = document.getElementById('precioTotal')
 let btnConverter = document.getElementById('btnConverter')
 
 let contenedorComprar = document.getElementById('contenedorComprar')
-// console.log(obtenerDatosDelLocalStorage)
 
+let btnFinalizar = document.getElementById('btnFinalizar')
 
+//imagen para la alerta
+
+const imgApu = "../img/apus.jpg"
+
+//obtener los datos del chango en el local storage
 
 obtenerDatosDelLocalStorage.forEach((prod) => {
     const div = document.createElement('div')
@@ -23,18 +30,17 @@ obtenerDatosDelLocalStorage.forEach((prod) => {
 })
 
 
+//calcular el precio total y guardarlo en una variable para convertirlo a pesos argentinos
 
 let precio = obtenerDatosDelLocalStorage.reduce((acc, prod) => acc + prod.precio, 0)
 
-console.log(precio)
+//obtener cotizacion del dolar blue desde una api, y multiplarlo por el precio anterior en USD
 
 let dolarblue;
 
 let precioFinal;
 
 let apiDolarUrl = "https://www.dolarsi.com/api/api.php?type=valoresprincipales"
-
-
 
 
 multiplicar = (a, b) =>{
@@ -58,36 +64,14 @@ const getApi = async () => {
     })
 }
 
+//eventos para ejecutar la conversion a ARS y para finalizar compra
+
 btnConverter.addEventListener('click', getApi)
 
-
-// fetch(apiDolarUrl)
-//     .then((response) => response.json())
-//     .then((dolar) => {dolarblue = (dolar[1].casa.venta) 
-//         let dolarBlueNumber = parseFloat(dolarblue)
-//         precioFinal = multiplicar(precio, dolarBlueNumber)
-//         console.log(dolarblue)   
-//         console.log(precioFinal)
-//     })
+btnFinalizar.addEventListener('click',swal({
+    title: "Gracias por tu compra!!",
+    text: "Vuelvas Prontos",
+    icon: imgApu,
+}) )
 
 
-
-
-// const contenedorProductos = document.getElementById('contenedorProductos')
-
-
-
-
-
-// fetch(apiDolarUrl)
-//     .then((response) => response.json())
-//     .then((dolar) => {
-//         dolar.forEach((dolar) => {
-//             const div = document.createElement('div')
-//             div.innerHTML = `
-//             <h4>Dolar Blue </h4>
-//             <p>Venta${dolar.casa.venta}</p>            
-//             `
-//             contenedorProductos.appendChild(div)
-//         })
-//     }  ) 

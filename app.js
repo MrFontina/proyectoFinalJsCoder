@@ -1,3 +1,5 @@
+//Obtengo elementos del html
+
 let contenedorProductos = document.getElementById('contenedorProductos')
 
 let btnCuchillos = document.getElementById('btnCuchillos')
@@ -15,16 +17,8 @@ let btnComprar = document.getElementById('btnComprar')
 let btnVaciar = document.getElementById('btnVaciar')
 
 let precioTotal = document.getElementById('precioTotal')
-// let form = document.getElementById('form')
 
-// let filtro = document.getElementById('filtro').value
-
-
-
-
-
-
-//TODOS LOS PRODUCTOS
+//TODOS LOS PRODUCTOS en el DOM
 
 stock.forEach((producto) => {
     const div = document.createElement('div')
@@ -38,7 +32,7 @@ stock.forEach((producto) => {
     contenedorProductos.appendChild(div)
     const boton = document.getElementById(`agregar${producto.id}`)
     boton.addEventListener('click', () => {
-    agregarAlChango(producto.id)
+    agregarAlChango(producto.id), toastifyAdd()
     })
 })
 
@@ -63,7 +57,7 @@ filtrarPorCuchillos = () => {
         const boton = document.getElementById(`agregar${producto.id}`)
 
         boton.addEventListener ('click', () => {
-            agregarAlChango(producto.id)
+            agregarAlChango(producto.id), toastifyAdd()
         })
     })
 }
@@ -89,7 +83,7 @@ filtrarPorMates = () => {
         const boton = document.getElementById(`agregar${producto.id}`)
 
         boton.addEventListener ('click', () => {
-            agregarAlChango(producto.id)
+            agregarAlChango(producto.id), toastifyAdd()
         })
     })
 }
@@ -113,7 +107,7 @@ filtrarPorBombillas = () => {
         const boton = document.getElementById(`agregar${producto.id}`)
 
         boton.addEventListener ('click', () => {
-            agregarAlChango(producto.id)
+            agregarAlChango(producto.id), toastifyAdd()
         })
     })
 }
@@ -135,7 +129,7 @@ filtrarPorHebillas = () => {
         const boton = document.getElementById(`agregar${producto.id}`)
 
         boton.addEventListener ('click', () => {
-            agregarAlChango(producto.id)
+            agregarAlChango(producto.id), toastifyAdd()
         })
     })
 }
@@ -157,7 +151,7 @@ todosAgain = () => {
         const boton = document.getElementById(`agregar${producto.id}`)
 
         boton.addEventListener ('click', () => {
-            agregarAlChango(producto.id)
+            agregarAlChango(producto.id), toastifyAdd()
         })
     
         
@@ -176,3 +170,35 @@ btnVaciar.addEventListener('click', () => {
     chango.length = 0
     actualizarChango()
 })
+
+//notificaciones toastify
+
+function toastifyAdd(){
+    Toastify({
+    text: "Agregaste un producto!",
+    duration: 3000,
+    newWindow: true,
+    close: true,
+    gravity: "top", 
+    position: "right", 
+    stopOnFocus: true, 
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+    },
+    submit: function(){} 
+  }).showToast();}
+
+  function toastifyDelete(){
+    Toastify({
+    text: "Eliminaste un producto!",
+    duration: 3000,
+    newWindow: true,
+    close: true,
+    gravity: "top", 
+    position: "right", 
+    stopOnFocus: true, 
+    style: {
+      background: "red",
+    },
+    submit: function(){} 
+  }).showToast();}
