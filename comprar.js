@@ -1,16 +1,16 @@
 //Traigo los elementos del html
 
-let elementosDelChango = document.getElementById('elementosDelChango')
+const elementosDelChango = document.getElementById('elementosDelChango')
 
 let obtenerDatosDelLocalStorage = JSON.parse(localStorage.getItem('chango'))
 
-let precioTotal = document.getElementById('precioTotal')
+const precioTotal = document.getElementById('precioTotal')
 
-let btnConverter = document.getElementById('btnConverter')
+const btnConverter = document.getElementById('btnConverter')
 
-let contenedorComprar = document.getElementById('contenedorComprar')
+const contenedorComprar = document.getElementById('contenedorComprar')
 
-let btnFinalizar = document.getElementById('btnFinalizar')
+const btnFinalizar = document.getElementById('btnFinalizar')
 
 //imagen para la alerta
 

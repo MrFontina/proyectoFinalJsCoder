@@ -1,8 +1,15 @@
 //Funciones del changuito de compras
 
-let contenedorChango = document.getElementById('contenedorChango')
+const contenedorChango = document.getElementById('contenedorChango')
 
 let chango = []
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('chango')){
+        chango = JSON.parse(localStorage.getItem('chango'))
+        actualizarChango()
+    }
+})
 
 agregarAlChango = (prodId) => {
     const item = stock.find((prod) => prod.id === prodId)

@@ -1,14 +1,14 @@
 //elementos del formulario
 
-let formRegistro = document.getElementById('formRegistro')
-let formMail = document.getElementById('formMail')
-let formNombre = document.getElementById('formNombre')
-let formTelefono = document.getElementById('formTel')
+const formRegistro = document.getElementById('formRegistro')
+const formMail = document.getElementById('formMail')
+const formNombre = document.getElementById('formNombre')
+const formTelefono = document.getElementById('formTel')
 
-let mail = document.getElementById('mail')
-let nombre = document.getElementById('nombreApellido')
-let telefono = document.getElementById('telefono')
-let pais = document.getElementById('selectPais')
+const mail = document.getElementById('mail')
+const nombre = document.getElementById('nombreApellido')
+const telefono = document.getElementById('telefono')
+const pais = document.getElementById('selectPais')
 
 //imagenes para alerta
 

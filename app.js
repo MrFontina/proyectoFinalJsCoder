@@ -1,22 +1,22 @@
 //Obtengo elementos del html
 
-let contenedorProductos = document.getElementById('contenedorProductos')
+const contenedorProductos = document.getElementById('contenedorProductos')
 
-let btnCuchillos = document.getElementById('btnCuchillos')
+const btnCuchillos = document.getElementById('btnCuchillos')
 
-let btnMates = document.getElementById('btnMates')
+const btnMates = document.getElementById('btnMates')
 
-let btnHebillas = document.getElementById('btnHebillas')
+const btnHebillas = document.getElementById('btnHebillas')
 
-let btnBombillas = document.getElementById('btnBombillas')
+const btnBombillas = document.getElementById('btnBombillas')
 
-let btnTodos = document.getElementById('btnTodos')
+const btnTodos = document.getElementById('btnTodos')
 
-let btnComprar = document.getElementById('btnComprar')
+const btnComprar = document.getElementById('btnComprar')
 
-let btnVaciar = document.getElementById('btnVaciar')
+const btnVaciar = document.getElementById('btnVaciar')
 
-let precioTotal = document.getElementById('precioTotal')
+const precioTotal = document.getElementById('precioTotal')
 
 //TODOS LOS PRODUCTOS en el DOM
 
