@@ -29,7 +29,11 @@ function validarDatosForm(e) {
     let telefonoOk = isFinite(telefono.value) && telefono.value > 0;
     let paisOk = (pais.value == 'Argentina' || pais.value == 'Uruguay' || pais.value == 'Chile')
     if ((nombreOk.length == 0) || (mailOk.length == 0) || !(telefonoOk) || !(paisOk)) {
-        alert("MAL")
+        swal({
+            title: "Error",
+            text: "Ingrese los datos con mas cuidado",
+            
+        })
 
     } else {
         switch (pais.value) {
