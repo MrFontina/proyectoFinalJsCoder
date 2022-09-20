@@ -12,6 +12,9 @@ let btnTodos = document.getElementById('btnTodos')
 
 let btnComprar = document.getElementById('btnComprar')
 
+let btnVaciar = document.getElementById('btnVaciar')
+
+let precioTotal = document.getElementById('precioTotal')
 // let form = document.getElementById('form')
 
 // let filtro = document.getElementById('filtro').value
@@ -52,7 +55,7 @@ filtrarPorCuchillos = () => {
         div.classList.add('producto')
         div.innerHTML = `
             <h4>${producto.tipo}</h4>
-            <p>Precio: ${producto.precio}</p>
+            <p>Precio: USD${producto.precio}</p>
             <img src="${producto.img} ">
             <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
         `
@@ -78,7 +81,7 @@ filtrarPorMates = () => {
         div.classList.add('producto')
         div.innerHTML = `
             <h4>${producto.tipo}</h4>
-            <p>Precio: ${producto.precio}</p>
+            <p>Precio: USD${producto.precio}</p>
             <img src="${producto.img} ">
             <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
         `
@@ -102,7 +105,7 @@ filtrarPorBombillas = () => {
         div.classList.add('producto')
         div.innerHTML = `
             <h4>${producto.tipo}</h4>
-            <p>Precio: ${producto.precio}</p>
+            <p>Precio: USD${producto.precio}</p>
             <img src="${producto.img} ">
             <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
         `
@@ -124,7 +127,7 @@ filtrarPorHebillas = () => {
         div.classList.add('producto')
         div.innerHTML = `
             <h4>${producto.tipo}</h4>
-            <p>Precio: ${producto.precio}</p>
+            <p>Precio: USD${producto.precio}</p>
             <img src="${producto.img} ">
             <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
         `
@@ -146,7 +149,7 @@ todosAgain = () => {
         div.classList.add('producto')
         div.innerHTML = `
             <h4>${producto.tipo}</h4>
-            <p>Precio: ${producto.precio}</p>
+            <p>Precio: USD${producto.precio}</p>
             <img src="${producto.img} ">
             <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
         `
@@ -169,3 +172,7 @@ btnMates.addEventListener('click', filtrarPorMates)
 btnBombillas.addEventListener('click', filtrarPorBombillas)
 btnHebillas.addEventListener('click', filtrarPorHebillas)
 btnTodos.addEventListener('click', todosAgain)
+btnVaciar.addEventListener('click', () => {
+    chango.length = 0
+    actualizarChango()
+})

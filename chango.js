@@ -13,13 +13,15 @@ actualizarChango = () => {
     chango.forEach((prod) => {
         let div = document.createElement('div')
         div.innerHTML = `<div><p>Nombre del producto: ${prod.tipo}</p>
-        <p>Precio: ${prod.precio}<p/>
+        <p>Precio: USD${prod.precio}<p/>
         <button onclick="eliminarDelChango(${prod.id})" class="boton-eliminar">Eliminar<i class="fas fa-trash-alt"></i></button>
         </div>
         `
         contenedorChango.appendChild(div)
-        localStorage.setItem('chango', JSON.stringify(chango))
+        // localStorage.setItem('chango', JSON.stringify(chango))
     })
+    localStorage.setItem('chango', JSON.stringify(chango))
+    precioTotal.innerText = chango.reduce((acc, prod) => acc + prod.precio, 0)
 }
 
 eliminarDelChango = (prodId) => {
@@ -28,3 +30,4 @@ eliminarDelChango = (prodId) => {
     chango.splice(indice, 1)
     actualizarChango()
 }
+
