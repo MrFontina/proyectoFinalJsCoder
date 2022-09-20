@@ -68,10 +68,10 @@ const getApi = async () => {
 
 btnConverter.addEventListener('click', getApi)
 
-btnFinalizar.addEventListener('click',swal({
+btnFinalizar.addEventListener('click', () => {swal({
     title: "Gracias por tu compra!!",
     text: "Vuelvas Prontos",
     icon: imgApu,
-}) )
+}) } )
 
 
