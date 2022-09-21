@@ -4,12 +4,11 @@ const contenedorChango = document.getElementById('contenedorChango')
 
 let chango = []
 
-document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('chango')){
-        chango = JSON.parse(localStorage.getItem('chango'))
-        actualizarChango()
-    }
-})
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {localStorage.getItem('chango') ? (chango = JSON.parse(localStorage.getItem('chango')), actualizarChango()) : null})
 
 agregarAlChango = (prodId) => {
     const item = stock.find((prod) => prod.id === prodId)
