@@ -27,7 +27,7 @@ stock.forEach((producto) => {
         <h4>${producto.tipo}</h4>
         <p>Precio: USD ${producto.precio}</p>
         <img src="${producto.img} ">
-        <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+        <button id="agregar${producto.id}" class="boton-agregar"><i class="fas fa-shopping-cart"></i></button>
     `
     contenedorProductos.appendChild(div)
     const boton = document.getElementById(`agregar${producto.id}`)
@@ -43,7 +43,7 @@ filtrarPorCuchillos = () => {
     while (contenedorProductos.firstChild) {
         contenedorProductos.removeChild(contenedorProductos.firstChild);
     }
-    stock.filter(producto => producto.tipo === "Cuchillo").forEach((producto) => {
+    stock.filter(producto => producto.tipo === "CUCHILLO").forEach((producto) => {
 
         const div = document.createElement('div')
         div.classList.add('producto')
@@ -51,7 +51,7 @@ filtrarPorCuchillos = () => {
             <h4>${producto.tipo}</h4>
             <p>Precio: USD${producto.precio}</p>
             <img src="${producto.img} ">
-            <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+            <button id="agregar${producto.id}" class="boton-agregar"><i class="fas fa-shopping-cart"></i></button>
         `
         contenedorProductos.appendChild(div)
         const boton = document.getElementById(`agregar${producto.id}`)
@@ -70,14 +70,14 @@ filtrarPorMates = () => {
     while (contenedorProductos.firstChild) {
         contenedorProductos.removeChild(contenedorProductos.firstChild);
     }
-    stock.filter(producto => producto.tipo === "Mate").forEach((producto) => {
+    stock.filter(producto => producto.tipo === "MATE").forEach((producto) => {
         const div = document.createElement('div')
         div.classList.add('producto')
         div.innerHTML = `
             <h4>${producto.tipo}</h4>
             <p>Precio: USD${producto.precio}</p>
             <img src="${producto.img} ">
-            <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+            <button id="agregar${producto.id}" class="boton-agregar"><i class="fas fa-shopping-cart"></i></button>
         `
         contenedorProductos.appendChild(div)
         const boton = document.getElementById(`agregar${producto.id}`)
@@ -94,14 +94,14 @@ filtrarPorBombillas = () => {
     while (contenedorProductos.firstChild) {
         contenedorProductos.removeChild(contenedorProductos.firstChild);
     }
-    stock.filter(producto => producto.tipo === "Bombilla").forEach((producto) => {
+    stock.filter(producto => producto.tipo === "BOMBILLA").forEach((producto) => {
         const div = document.createElement('div')
         div.classList.add('producto')
         div.innerHTML = `
             <h4>${producto.tipo}</h4>
             <p>Precio: USD${producto.precio}</p>
             <img src="${producto.img} ">
-            <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+            <button id="agregar${producto.id}" class="boton-agregar"><i class="fas fa-shopping-cart"></i></button>
         `
         contenedorProductos.appendChild(div)
         const boton = document.getElementById(`agregar${producto.id}`)
@@ -116,14 +116,14 @@ filtrarPorHebillas = () => {
     while (contenedorProductos.firstChild) {
         contenedorProductos.removeChild(contenedorProductos.firstChild);
     }
-    stock.filter(producto => producto.tipo === "Hebilla").forEach((producto) => {
+    stock.filter(producto => producto.tipo === "HEBILLA").forEach((producto) => {
         const div = document.createElement('div')
         div.classList.add('producto')
         div.innerHTML = `
             <h4>${producto.tipo}</h4>
             <p>Precio: USD${producto.precio}</p>
             <img src="${producto.img} ">
-            <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+            <button id="agregar${producto.id}" class="boton-agregar"><i class="fas fa-shopping-cart"></i></button>
         `
         contenedorProductos.appendChild(div)
         const boton = document.getElementById(`agregar${producto.id}`)
@@ -145,7 +145,7 @@ todosAgain = () => {
             <h4>${producto.tipo}</h4>
             <p>Precio: USD${producto.precio}</p>
             <img src="${producto.img} ">
-            <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+            <button id="agregar${producto.id}" class="boton-agregar"><i class="fas fa-shopping-cart"></i></button>
         `
         contenedorProductos.appendChild(div)
         const boton = document.getElementById(`agregar${producto.id}`)
