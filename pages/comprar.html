@@ -12,14 +12,33 @@
 </head>
 
 <body>
-    
-    <div class="container" id="elementosDelChango">        
+
+    <header>
+        <nav class="navbar navbar-dark bg-dark" id="navBar">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Monteverde Orfebre</span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container" id="elementosDelChango">
+        <div class="contenedorComprar container-fluid" id="contenedorComprar">
+            <div class="contenedorIzquierdo container container-fluid" id="contenedorIzquierdo">
+
+            </div>
+            <div class="contenedorDerecho">
+                <h5 class="precioProducto">Precio total: USD$<span id="precioTotal">0</span></h5>
+                <div class="precioEnArs" id="precioEnArs"></div>
+                <div class="container" id="botones">
+                    <button type="button" class="btn btn-danger" id="btnConverter">Convertir a ARS</button>
+                    <button type="button" class="btn btn-success" id="btnFinalizar">Finalizar compra</button>
+                </div>
+            </div>
+
+
+        </div>
     </div>
-    <div class="contenedorComprar" id="contenedorComprar">
-        <p class="precioProducto">Precio total: USD$<span id="precioTotal">0</span></p>
-        <button type="button" class="btn btn-danger" id="btnConverter">Convertir a ARS</button>
-        <button type="button" class="btn btn-success" id="btnFinalizar">Finalizar compra</button>
-    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
@@ -28,7 +47,7 @@
     <script src="../comprar.js"></script>
     <!-- <script src="../chango.js"></script>
     <script src="../app.js"></script> -->
-    
+
 </body>
 
 </html>
