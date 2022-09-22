@@ -166,9 +166,7 @@ btnMates.addEventListener('click', filtrarPorMates)
 btnBombillas.addEventListener('click', filtrarPorBombillas)
 btnHebillas.addEventListener('click', filtrarPorHebillas)
 btnTodos.addEventListener('click', todosAgain)
-btnVaciar.addEventListener('click', () => {
-    chango.length = 0
-    actualizarChango()
+btnVaciar.addEventListener('click', () => { chango.length > 0 ? (chango.length = 0, actualizarChango()) : toastifyChangoVacio()
 })
 
 //notificaciones toastify
@@ -191,6 +189,21 @@ function toastifyAdd(){
   function toastifyDelete(){
     Toastify({
     text: "Eliminaste un producto!",
+    duration: 3000,
+    newWindow: true,
+    close: true,
+    gravity: "top", 
+    position: "right", 
+    stopOnFocus: true, 
+    style: {
+      background: "red",
+    },
+    submit: function(){} 
+  }).showToast();}
+
+  function toastifyChangoVacio(){
+    Toastify({
+    text: "Tu changuito está vacío",
     duration: 3000,
     newWindow: true,
     close: true,
