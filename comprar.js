@@ -60,7 +60,7 @@ const getApi = async () => {
             precioFinal = multiplicar(precio, dolarBlueNumber)
             let div = document.createElement('div')
             div.innerHTML = `<h6>Precio final en ARS:</h6>
-        <p>${precioFinal}</p>
+        <p>$ ${precioFinal}</p>
         `
             precioEnArs.appendChild(div)
 
