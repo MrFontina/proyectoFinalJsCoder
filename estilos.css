@@ -67,6 +67,7 @@ body {
 #elementosDelChango{
     display: flex;
     flex-direction: row;
+    margin-bottom: 40px;
     /* justify-content: center; */
     /* background-color: green */
     
@@ -83,10 +84,7 @@ body {
     
 }
 
-.contenedorIzquierdo{
-    /* background-color: red;        */
 
-}
 
 .contenedorDerecho{
     display: flex;
@@ -99,4 +97,13 @@ body {
 #botones{
     display: flex;
     flex-direction: column;
+}
+
+@media only screen and (max-width: 768px){
+    
+    .contenedorComprar{
+        display: flex;
+        flex-direction: column;
+        
+    }
 }
