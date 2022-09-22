@@ -35,11 +35,16 @@ body {
 
 }
 
-
+.productoFinal{
+    margin: 20px;
+    padding: 20px;
+    
+}
 
 .producto img {
     width: 100px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    
 }
 
 #contenedorProductos {
@@ -50,9 +55,10 @@ body {
     flex-wrap: wrap;
 }
 
+
+
 .productoFinal img {
-    
-    height: 150px;
+   height: 150px;
 }
 
 #chango{
